@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="infoViewStyle" format="reference" />
+    <attr name="infoViewTitleAppearance" format="reference" />
+
+    <attr name="seriesCardTheme" format="reference" />
+    <attr name="seriesCardPosterStyle" format="reference" />
+    <attr name="seriesCardNameTextAppearance" format="reference" />
+    <attr name="seriesCardSummaryTextAppearance" format="reference" />
+    <attr name="seriesCardGenresTextAppearance" format="reference" />
+
+    <attr name="homePageTheme" format="reference" />
+
+    <attr name="seasonListTheme" format="reference" />
+    <attr name="seasonListEpisodeItemStyle" format="reference" />
+    <attr name="seasonListEpisodeItemIndexTextAppearance" format="reference" />
+    <attr name="seasonListEpisodeItemNameTextAppearance" format="reference" />
+
+    <attr name="seriesPageTheme" format="reference" />
+    <attr name="seriesPagePosterStyle" format="reference" />
+    <attr name="seriesPageNameTextAppearance" format="reference" />
+    <attr name="seriesPageTimeTextAppearance" format="reference" />
+    <attr name="seriesPageDayTextAppearance" format="reference" />
+    <attr name="seriesPageSummaryTextAppearance" format="reference" />
+    <attr name="seriesPageGenresTextAppearance" format="reference" />
+
+    <attr name="seasonEpisodesListTheme" format="reference" />
+
+    <attr name="episodePageTheme" format="reference" />
+    <attr name="episodePagePosterStyle" format="reference" />
+    <attr name="episodePageSeasonAndEpisodeTextAppearance" format="reference" />
+    <attr name="episodePageNameTextAppearance" format="reference" />
+    <attr name="episodePageSummaryTextAppearance" format="reference" />
+
+</resources>

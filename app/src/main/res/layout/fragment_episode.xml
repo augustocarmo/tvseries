@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="?episodePageTheme">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        style="?episodePagePosterStyle"
+        android:id="@+id/poster"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/contentScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poster">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textAppearance="?episodePageSeasonAndEpisodeTextAppearance"
+                android:id="@+id/seasonAndEpisode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                app:layout_constraintBaseline_toBaselineOf="@+id/name"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="S1E3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textAppearance="?episodePageNameTextAppearance"
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/seasonAndEpisode"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Modern Family" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textAppearance="?attr/episodePageSummaryTextAppearance"
+                android:id="@+id/summary"
+                android:layout_width="0dp"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:gravity="top|start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seasonAndEpisode"
+                tools:text="Quisque in efficitur nulla. Sed vehicula sodales justo at consequat. Fusce dignissim accumsan nisl in maximus. Phasellus bibendum, lacus aliquam iaculis sollicitudin, libero nisi ultricies est, quis dapibus velit dui ultricies enim. Nullam interdum mollis felis vel euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas enim magna, hendrerit eu erat in, molestie porttitor ipsum. Ut egestas velit nunc, a bibendum felis aliquet non. Vivamus quis risus leo. Mauris hendrerit congue diam non efficitur. Sed aliquam libero id tempor faucibus. Suspendisse justo nisl, imperdiet eu augue in, blandit lacinia mauris. Pellentesque efficitur volutpat sapien eu sodales. Cras elementum turpis fermentum mollis posuere. Ut porta sollicitudin sem a fermentum. " />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <carmo.augusto.tvseries.ui.views.InfoView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contentScroll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

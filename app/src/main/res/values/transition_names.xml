@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transition_poster">poster_%1$d</string>
+    <string name="transition_name">name_%1$d</string>
+    <string name="transition_summary">summary_%1$d</string>
+    <string name="transition_genres">genres_%1$d</string>
+</resources>

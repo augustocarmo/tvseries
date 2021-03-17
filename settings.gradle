@@ -1,0 +1,6 @@
+include ':viewmodels'
+include ':repository'
+include ':core'
+include ':webservice'
+include ':app'
+rootProject.name = "TV Series"

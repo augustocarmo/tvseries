@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TVSeries" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="infoViewStyle">@style/Widget.TVSeries.Info</item>
+        <item name="homePageTheme">@style/ThemeOverlay.TVSeries.Page.Home</item>
+        <item name="seriesPageTheme">@style/ThemeOverlay.TVSeries.Page.Series</item>
+        <item name="seasonEpisodesListTheme">@style/ThemeOverlay.TVSeries.List.Seasons</item>
+        <item name="episodePageTheme">@style/ThemeOverlay.TVSeries.Page.Episode</item>
+    </style>
+
+    <style name="Theme.TVSeries.Toolbar" parent="Theme.TVSeries">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.TVSeries.Page.Home" parent="">
+        <item name="seriesCardTheme">@style/ThemeOverlay.TVSeries.Card.Series</item>
+    </style>
+
+    <style name="ThemeOverlay.TVSeries.Card.Series" parent="">
+        <item name="seriesCardPosterStyle">@style/Widget.TVSeries.Card.Poster</item>
+        <item name="seriesCardNameTextAppearance">@style/TextAppearance.TVSeries.Card.Name</item>
+        <item name="seriesCardSummaryTextAppearance">@style/TextAppearance.TVSeries.Card.Summary</item>
+        <item name="seriesCardGenresTextAppearance">@style/TextAppearance.TVSeries.Card.Genres</item>
+    </style>
+
+    <style name="ThemeOverlay.TVSeries.Page.Series" parent="">
+        <item name="seasonListTheme">@style/ThemeOverlay.TVSeries.List.Seasons</item>
+        <item name="seriesPagePosterStyle">@style/Widget.TVSeries.Page.Series.Poster</item>
+        <item name="seriesPageNameTextAppearance">@style/TextAppearance.TVSeries.Page.Series.Name</item>
+        <item name="seriesPageTimeTextAppearance">@style/TextAppearance.TVSeries.Page.Series.Time</item>
+        <item name="seriesPageDayTextAppearance">@style/TextAppearance.TVSeries.Page.Series.Day</item>
+        <item name="seriesPageSummaryTextAppearance">@style/TextAppearance.TVSeries.Page.Series.Summary</item>
+        <item name="seriesPageGenresTextAppearance">@style/TextAppearance.TVSeries.Page.Series.Genres</item>
+    </style>
+
+    <style name="ThemeOverlay.TVSeries.List.Seasons" parent="">
+        <item name="seasonListEpisodeItemStyle">@style/Widget.TVSeries.List.Seasons.Episode</item>
+        <item name="seasonListEpisodeItemIndexTextAppearance">@style/TextAppearance.TVSeries.List.Season.Episode.Index</item>
+        <item name="seasonListEpisodeItemNameTextAppearance">@style/TextAppearance.TVSeries.List.Season.Episode.Name</item>
+    </style>
+
+    <style name="ThemeOverlay.TVSeries.Page.Episode" parent="">
+        <item name="episodePagePosterStyle">@style/Widget.TVSeries.Page.Episode.Poster</item>
+        <item name="episodePageSeasonAndEpisodeTextAppearance">@style/TextAppearance.TVSeries.Page.Episode.SeasonAndEpisode</item>
+        <item name="episodePageNameTextAppearance">@style/TextAppearance.TVSeries.Page.Episode.Name</item>
+        <item name="episodePageSummaryTextAppearance">@style/TextAppearance.TVSeries.Page.Episode.Summary</item>
+    </style>
+
+</resources>

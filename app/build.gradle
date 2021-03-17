@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "carmo.augusto.tvseries"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${libsVersions.ktx}"
+
+    // app submodules
+    implementation project(path: ':core')
+    implementation project(path: ':webservice')
+    implementation project(path: ':repository')
+    implementation project(path: ':viewmodels')
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${libsVersions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${libsVersions.navigation}"
+
+    // Koin for Android
+    implementation "org.koin:koin-android:${libsVersions.koin}"
+    implementation "org.koin:koin-android-viewmodel:${libsVersions.koin}"
+    implementation "org.koin:koin-android-scope:${libsVersions.koin}"
+
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:${libsVersions.recyclerView}"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:${libsVersions.glide}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${libsVersions.glide}"
+
+    // ViewPager2
+    implementation "androidx.viewpager2:viewpager2:${libsVersions.viewPager2}"
+
+    implementation "androidx.appcompat:appcompat:${libsVersions.appCompat}"
+    implementation "com.google.android.material:material:${libsVersions.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${libsVersions.constraintLayout}"
+    testImplementation "junit:junit:${libsVersions.jUnit}"
+    androidTestImplementation "androidx.test.ext:junit:${libsVersions.jUnitExt}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${libsVersions.espresso}"
+}

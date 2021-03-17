@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="carmo.augusto.tvseries.ui.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_seriesFragment"
+            app:destination="@id/seriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchSeriesFragment"
+            app:destination="@id/searchSeriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="carmo.augusto.tvseries.ui.fragments.SeriesFragment"
+        android:label="SeriesFragment">
+        <argument
+            android:name="seriesId"
+            app:argType="integer" />
+        <argument
+            android:name="posterUrl"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="summary"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="genres"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="carmo.augusto.tvseries.ui.fragments.EpisodeFragment"
+        android:label="EpisodeFragment" >
+        <argument
+            android:name="episodeId"
+            app:argType="integer" />
+        <argument
+            android:name="seasonNumber"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="episodeNumber"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchSeriesFragment"
+        android:name="carmo.augusto.tvseries.ui.fragments.SearchSeriesFragment"
+        android:label="SearchSeriesFragment" >
+        <action
+            android:id="@+id/action_searchSeriesFragment_to_seriesFragment"
+            app:destination="@id/seriesFragment" />
+    </fragment>
+
+</navigation>
