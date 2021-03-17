@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TV Series</string>
+
+    <string name="season_format">Season %1$d</string>
+    <string name="season_and_episode_format">S%1$dE%2$d</string>
+
+    <!-- Pages Names -->
+    <string name="page_home">@string/app_name</string>
+    <string name="page_series">Series</string>
+    <string name="page_episode">Episode</string>
+    <string name="page_search_series">Search Series</string>
+
+    <!-- Info View -->
+    <string name="info_view_no_internet_connection">No internet connection\nTap to retry</string>
+    <string name="info_view_server_error">Server error\nTap to retry</string>
+    <string name="info_view_generic_error">Server error\nTap to retry</string>
+
+    <!-- Error Toast Texts -->
+    <string name="toast_no_internet_connection">No internet connection</string>
+    <string name="toast_server_error">Server error</string>
+    <string name="toast_generic_error">Some error occurred</string>
+    <string name="toast_all_series_already_loaded">All Series Already Loaded</string>
+
+    <!-- Button Texts -->
+    <string name="button_load_more">Load More</string>
+
+    <!-- Menu Item -->
+    <string name="menu_item_search">Search Series</string>
+
+</resources>

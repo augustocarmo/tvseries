@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.TVSeries.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/grey_50</item>
+        <item name="cardElevation">6dp</item>
+    </style>
+
+    <style name="Widget.TVSeries.Card.Poster" parent="">
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+    <style name="Widget.TVSeries.List.Seasons.Episode" parent="">
+        <item name="android:background">@color/grey_50</item>
+    </style>
+
+    <style name="Widget.TVSeries.Page.Series.Poster" parent="">
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+    <style name="Widget.TVSeries.Info" parent="">
+        <item name="android:background">@color/grey_50</item>
+        <item name="infoViewTitleAppearance">@style/TextAppearance.TVSeries.Info.Title</item>
+    </style>
+
+    <style name="Widget.TVSeries.Page.Episode.Poster" parent="">
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+</resources>
